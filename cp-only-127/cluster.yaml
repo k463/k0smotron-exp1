@@ -1,0 +1,21 @@
+apiVersion: cluster.x-k8s.io/v1beta1
+kind: Cluster
+metadata:
+  name: cpo127-k0swc1
+  namespace: cpo127-k0swc1
+spec:
+  clusterNetwork:
+    pods:
+      cidrBlocks:
+      - 10.10.0.0/16
+    services:
+      cidrBlocks:
+      - 10.20.0.0/16
+  controlPlaneRef:
+    apiVersion: controlplane.cluster.x-k8s.io/v1beta1
+    kind: K0smotronControlPlane
+    name: cpo127-k0swc1-k0cp
+  infrastructureRef:
+    apiVersion: infrastructure.cluster.x-k8s.io/v1beta1
+    kind: RemoteCluster
+    name: cpo127-k0swc1-rc

@@ -1,0 +1,7 @@
+# This is just a placeholder object needed to fulfil CAPI contract.
+apiVersion: infrastructure.cluster.x-k8s.io/v1beta1
+kind: RemoteCluster
+metadata:
+  name: cpo127-k0swc1-rc
+  namespace: cpo127-k0swc1
+spec:
